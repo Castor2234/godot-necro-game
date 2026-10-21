@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dxab1xou3bq1c"]
+
+[ext_resource type="Script" uid="uid://bca0byj0diftl" path="res://buildings/village/village.gd" id="1_0i42m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scjso"]
+size = Vector2(85, 79)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hgiiw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8hk2"]
+bg_color = Color(3.657937e-06, 0.7258584, 0.174196, 1)
+
+[node name="Village" type="Area2D" unique_id=1308202906 groups=["Villages"]]
+collision_mask = 3
+script = ExtResource("1_0i42m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=960479717]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_scjso")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=142862200]
+position = Vector2(0, 1)
+scale = Vector2(0.16479486, 0.1560058)
+texture = SubResource("NoiseTexture2D_hgiiw")
+
+[node name="PopulationText" type="Label" parent="." unique_id=1859467614]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -63.0
+offset_right = 35.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_g8hk2")
+text = "Population"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="VillageData" format=3 uid="uid://ed7ky3g0obnp"]
+
+[ext_resource type="Script" uid="uid://w8abhi6m167b" path="res://buildings/village/village_data.gd" id="1_tmrgw"]
+
+[resource]
+script = ExtResource("1_tmrgw")
+Population = 79
+metadata/_custom_type_script = "uid://w8abhi6m167b"

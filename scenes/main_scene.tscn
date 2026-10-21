@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cb28jvtj1sa0v"]
+
+[ext_resource type="Script" uid="uid://bnuyle6n3vr5x" path="res://scripts/game.gd" id="1_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://8k08f3brachc" path="res://buildings/base.tscn" id="1_pw63i"]
+[ext_resource type="PackedScene" uid="uid://dxab1xou3bq1c" path="res://buildings/village/village.tscn" id="2_7ykc4"]
+[ext_resource type="Resource" uid="uid://ed7ky3g0obnp" path="res://data/villages/village2.tres" id="4_gubc5"]
+[ext_resource type="Resource" uid="uid://cslrylen8vypr" path="res://data/villages/village1.tres" id="4_pu3yx"]
+
+[node name="MainScene" type="Node2D" unique_id=2038004140]
+script = ExtResource("1_7ykc4")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1771396556]
+offset_right = 1143.0
+offset_bottom = 641.0
+mouse_filter = 2
+color = Color(0.40392157, 0.38431373, 1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1174875300]
+position = Vector2(576, 323)
+
+[node name="Base" parent="." unique_id=1234339083 instance=ExtResource("1_pw63i")]
+position = Vector2(196, 259)
+
+[node name="Village" parent="." unique_id=1308202906 instance=ExtResource("2_7ykc4")]
+position = Vector2(714, 97)
+data = ExtResource("4_gubc5")
+
+[node name="Village2" parent="." unique_id=1017866134 instance=ExtResource("2_7ykc4")]
+position = Vector2(788, 337)
+data = ExtResource("4_pu3yx")
