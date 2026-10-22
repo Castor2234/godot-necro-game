@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 enum State { GOING, WAITING, RETURNING }
 
-@export var speed: float = 150.0
+@export var speed: float = 50.0
 @export var wait_time: float = 1.0
 @export var damage: int = 10
 

@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dxab1xou3bq1c"]
 
-[ext_resource type="Script" uid="uid://bca0byj0diftl" path="res://buildings/village/village.gd" id="1_0i42m"]
+[ext_resource type="Script" uid="uid://bca0byj0diftl" path="res://Buildings/village/village.gd" id="1_2wk00"]
+[ext_resource type="Script" uid="uid://cmyfh5bumw8p2" path="res://Buildings/village/village_ui.gd" id="2_mrhyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_scjso"]
-size = Vector2(85, 79)
+size = Vector2(54, 52)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hgiiw"]
 
@@ -12,30 +13,59 @@ bg_color = Color(3.657937e-06, 0.7258584, 0.174196, 1)
 
 [node name="Village" type="Area2D" unique_id=1308202906 groups=["Villages"]]
 collision_mask = 3
-script = ExtResource("1_0i42m")
+script = ExtResource("1_2wk00")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=960479717]
-position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_scjso")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=142862200]
-position = Vector2(0, 1)
-scale = Vector2(0.16479486, 0.1560058)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=142862200]
+position = Vector2(1, 0)
+scale = Vector2(0.10583493, 0.1014404)
 texture = SubResource("NoiseTexture2D_hgiiw")
 
-[node name="PopulationText" type="Label" parent="." unique_id=1859467614]
+[node name="VillageUI" type="Node2D" parent="." unique_id=107076140]
+script = ExtResource("2_mrhyq")
+
+[node name="PowerLabel" type="Label" parent="VillageUI" unique_id=1859467614]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -63.0
-offset_right = 35.0
-offset_bottom = -40.0
+offset_left = -43.0
+offset_top = -85.0
+offset_right = 42.0
+offset_bottom = -62.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_g8hk2")
 text = "Population"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SplitBar" type="ProgressBar" parent="VillageUI" unique_id=1942417841]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -47.0
+offset_right = 2.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 8.56
+
+[node name="SplitLabel" type="Label" parent="VillageUI" unique_id=1368105798]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -62.0
+offset_right = 20.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ssex"

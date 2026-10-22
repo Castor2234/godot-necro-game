@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="VillageData" format=3 uid="uid://cl3h3taik6f5e"]
+
+[ext_resource type="Script" uid="uid://w8abhi6m167b" path="res://Buildings/village/VillageData.gd" id="1_uv7w2"]
+
+[resource]
+script = ExtResource("1_uv7w2")
+Population = 10000
+has_army = true
+metadata/_custom_type_script = "uid://w8abhi6m167b"
