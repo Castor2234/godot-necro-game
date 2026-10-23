@@ -10,7 +10,6 @@ func _ready() -> void:
 		village.input_pickable = true
 		# .bind(village) passes the clicked village as the last argument
 		village.input_event.connect(_on_village_input_event.bind(village))
-	print("villages found: ", get_tree().get_nodes_in_group(Village.GROUP).size())
 	
 
 

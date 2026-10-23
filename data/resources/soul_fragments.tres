@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ResourceDef" format=3 uid="uid://dngkpwft64ajd"]
+
+[ext_resource type="Texture2D" uid="uid://bwey1566rxgt0" path="res://icon.svg" id="1_8opee"]
+[ext_resource type="Script" uid="uid://cr8o71dbadg7r" path="res://scripts/resource_def.gd" id="1_ylwj1"]
+
+[resource]
+script = ExtResource("1_ylwj1")
+id = &"soul_fragments"
+display_name = "Soul Fragments"
+icon = ExtResource("1_8opee")
+unit_label = "m³"
+decimals = 3
+metadata/_custom_type_script = "uid://cr8o71dbadg7r"

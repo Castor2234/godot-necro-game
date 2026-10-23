@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceDef" format=3 uid="uid://c8yuytbwrkoha"]
+
+[ext_resource type="Texture2D" uid="uid://bwey1566rxgt0" path="res://icon.svg" id="1_bnsap"]
+[ext_resource type="Script" uid="uid://cr8o71dbadg7r" path="res://scripts/resource_def.gd" id="1_s72sk"]
+
+[resource]
+script = ExtResource("1_s72sk")
+id = &"flesh"
+display_name = "Flesh"
+icon = ExtResource("1_bnsap")
+metadata/_custom_type_script = "uid://cr8o71dbadg7r"

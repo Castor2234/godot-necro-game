@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceDef" format=3 uid="uid://cm3yuk5noxrqg"]
+
+[ext_resource type="Script" uid="uid://cr8o71dbadg7r" path="res://scripts/resource_def.gd" id="1_cnkvo"]
+[ext_resource type="Texture2D" uid="uid://bwey1566rxgt0" path="res://icon.svg" id="1_ikppw"]
+
+[resource]
+script = ExtResource("1_cnkvo")
+id = &"bones"
+display_name = "Bones"
+icon = ExtResource("1_ikppw")
+metadata/_custom_type_script = "uid://cr8o71dbadg7r"

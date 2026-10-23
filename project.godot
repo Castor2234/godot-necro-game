@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Necro Game"
-run/main_scene="uid://cb28jvtj1sa0v"
+run/main_scene="uid://bywwp6gfw1qkh"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneRouter="*uid://4maryrjwy6ik"
+GameClock="*uid://ccymmw2708p7n"
+PlayerResources="*uid://gskodxvsk2m6"
+Debug="*uid://cuvfu3s6in7tw"
 
 [display]
 
@@ -23,6 +30,10 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
+
+[gui]
+
+theme/custom="uid://1eurhgjsl6by"
 
 [input]
 

@@ -1,0 +1,18 @@
+[gd_resource type="Theme" format=3 uid="uid://1eurhgjsl6by"]
+
+[ext_resource type="StyleBox" uid="uid://bh4idk7x3s8la" path="res://ui/theme/ButtonHoveredStyleBox.tres" id="1_jnd74"]
+[ext_resource type="StyleBox" uid="uid://c2ipb2u6mfehd" path="res://ui/theme/ButtonNormalStyleBox.tres" id="2_kspi0"]
+[ext_resource type="StyleBox" uid="uid://bofkqv6argful" path="res://ui/theme/ButtonPressedStyleBox.tres" id="3_kspi0"]
+[ext_resource type="StyleBox" uid="uid://slv1piud3dpl" path="res://ui/theme/PanelStyleBox.tres" id="4_uvwpq"]
+
+[resource]
+Button/colors/font_pressed_color = Color(0.70131457, 0.70131457, 0.70131457, 1)
+Button/constants/outline_size = 6
+Button/font_sizes/font_size = 18
+Button/styles/hover = ExtResource("1_jnd74")
+Button/styles/normal = ExtResource("2_kspi0")
+Button/styles/pressed = ExtResource("3_kspi0")
+Label/font_sizes/font_size = 16
+Panel/styles/panel = ExtResource("4_uvwpq")
+PanelContainer/styles/panel = ExtResource("4_uvwpq")
+TabContainer/styles/panel = ExtResource("4_uvwpq")

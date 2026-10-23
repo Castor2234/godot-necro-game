@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cb28jvtj1sa0v"]
+
+[ext_resource type="Script" uid="uid://bnuyle6n3vr5x" path="res://GlobalScripts/game.gd" id="1_km7p3"]
+[ext_resource type="PackedScene" uid="uid://bqyta5iliypd0" path="res://Assets/location_1.tscn" id="2_1utv4"]
+[ext_resource type="Script" uid="uid://dwi1twp3qnenh" path="res://GlobalScripts/camera_2d.gd" id="3_xilrr"]
+[ext_resource type="PackedScene" uid="uid://8k08f3brachc" path="res://Buildings/base/base.tscn" id="4_attwl"]
+[ext_resource type="PackedScene" uid="uid://dxab1xou3bq1c" path="res://Buildings/village/village.tscn" id="5_0am8d"]
+[ext_resource type="Resource" uid="uid://cslrylen8vypr" path="res://data/villages/village1.tres" id="6_javxq"]
+[ext_resource type="Resource" uid="uid://ed7ky3g0obnp" path="res://data/villages/village2.tres" id="7_bkv7i"]
+[ext_resource type="Resource" uid="uid://cl3h3taik6f5e" path="res://data/villages/village3.tres" id="8_kkei4"]
+[ext_resource type="PackedScene" uid="uid://cluatfgjljbua" path="res://ui/hud.tscn" id="9_30fw1"]
+
+[node name="MainScene" type="Node2D" unique_id=2038004140]
+script = ExtResource("1_km7p3")
+
+[node name="Location1BG" parent="." unique_id=285424999 instance=ExtResource("2_1utv4")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1431424767]
+script = ExtResource("3_xilrr")
+
+[node name="Base" parent="." unique_id=1234339083 instance=ExtResource("4_attwl")]
+position = Vector2(19, 42)
+
+[node name="Village1" parent="." unique_id=1308202906 instance=ExtResource("5_0am8d")]
+position = Vector2(347, 230)
+data = ExtResource("6_javxq")
+
+[node name="Village2" parent="." unique_id=1410250102 instance=ExtResource("5_0am8d")]
+position = Vector2(34, 169)
+data = ExtResource("7_bkv7i")
+
+[node name="Village3" parent="." unique_id=392539155 instance=ExtResource("5_0am8d")]
+position = Vector2(185, 219)
+data = ExtResource("8_kkei4")
+
+[node name="HUD" parent="." unique_id=1269556505 instance=ExtResource("9_30fw1")]

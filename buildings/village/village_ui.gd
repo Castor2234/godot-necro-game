@@ -18,6 +18,3 @@ func _ready() -> void:
 
 func _refresh() -> void:
 	power_label.text = str(village.power)
-	bar.value = village.army_share
-	var army_pct := roundi(village.army_share * 100.0)
-	split_label.text = "%d%% / %d%%" % [army_pct, 100 - army_pct]

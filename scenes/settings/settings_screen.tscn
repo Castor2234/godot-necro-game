@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://q41ut6ej4fpd"]
+
+[ext_resource type="Script" uid="uid://dw4p6ypqt6c8k" path="res://scenes/settings/settings_screen.gd" id="1_dirvo"]
+[ext_resource type="Shader" uid="uid://qllg6rjf6kag" path="res://shaders/MagicCircleShader.gdshader" id="2_ji5pn"]
+[ext_resource type="Shader" uid="uid://b0jxxsiwo8lf5" path="res://shaders/SmokeAndFogShader.gdshader" id="3_f4tdg"]
+[ext_resource type="Shader" uid="uid://d14wau6c7kry7" path="res://shaders/RainbowShader.gdshader" id="4_ldjjk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hdtwi"]
+shader = ExtResource("2_ji5pn")
+shader_parameter/color = Color(0.54901963, 0.4509804, 1, 0.26666668)
+shader_parameter/glow = 4.0
+shader_parameter/rings = 3
+shader_parameter/star_points = 12
+shader_parameter/star_step = 3
+shader_parameter/ticks = 48
+shader_parameter/orbs = 12
+shader_parameter/line_width = 0.00500000023749
+shader_parameter/spin_speed = 0.025
+shader_parameter/pulse_speed = 3.065
+shader_parameter/appear = 0.250000011875
+
+[sub_resource type="Gradient" id="Gradient_toh72"]
+colors = PackedColorArray(0, 0, 0, 0, 0.37488914, 0.37193492, 0.60196483, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_df05h"]
+gradient = SubResource("Gradient_toh72")
+fill_to = Vector2(1, 0.012727273)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pjhuu"]
+shader = ExtResource("3_f4tdg")
+shader_parameter/octaves = 8
+shader_parameter/color_gradient = SubResource("GradientTexture2D_df05h")
+shader_parameter/speed_1 = 0.4
+shader_parameter/speed_2 = 0.15
+shader_parameter/smoke_persistance = 2.5
+shader_parameter/smoke_amplitude = 0.55
+shader_parameter/smoke_starting_offset = 0.02
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qg0w"]
+shader = ExtResource("4_ldjjk")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ir0c1"]
+font_size = 46
+shadow_size = 0
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_g8hk2"]
+
+[node name="SettingsScreen" type="Control" unique_id=1875252567]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dirvo")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1562955392]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.2, 1)
+
+[node name="MagicCircle" type="ColorRect" parent="." unique_id=959338715]
+material = SubResource("ShaderMaterial_hdtwi")
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -844.0
+offset_top = -883.0
+offset_right = 1556.0
+offset_bottom = 1517.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="SmokeAndFog" type="ColorRect" parent="." unique_id=2047526339]
+material = SubResource("ShaderMaterial_pjhuu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1947384819]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=965004470]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1293781851]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=978326551]
+layout_mode = 2
+text = "Back"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1139538127]
+material = SubResource("ShaderMaterial_6qg0w")
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_ir0c1")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer" unique_id=44768930]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 1
+
+[node name="Game" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=590538642]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Game" unique_id=1270382019]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Game/ScrollContainer" unique_id=1985570835]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Game/ScrollContainer/MarginContainer" unique_id=1579715863]
+layout_mode = 2
+
+[node name="Graphics" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=64605667]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Graphics" unique_id=270969519]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Graphics/ScrollContainer" unique_id=416452831]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Graphics/ScrollContainer/MarginContainer" unique_id=800636565]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Graphics/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1783946353]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Graphics/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1786124171]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Graphics/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=502226818]
+layout_mode = 2
+size_flags_horizontal = 10
+button_group = SubResource("ButtonGroup_g8hk2")
+selected = 0
+item_count = 2
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "2560x1440"
+popup/item_1/id = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_back_button_pressed"]
