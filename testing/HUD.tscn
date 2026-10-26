@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://bco6x76ot5kej"]
+
+[ext_resource type="Script" uid="uid://dojxae0bpj7w6" path="res://testing/hud.gd" id="1_7odlb"]
+[ext_resource type="Shader" uid="uid://chwm7psb4js3b" path="res://testing/shaders/LittleBlurShader.gdshader" id="2_7odlb"]
+[ext_resource type="Shader" uid="uid://462xqrwp2utu" path="res://testing/shaders/VignetteShader.gdshader" id="3_huo54"]
+[ext_resource type="Texture2D" uid="uid://c4uukksjnx05s" path="res://testing/Icons/Weather_Moon_Night_Crescent_Darkness_Mode_Twilight_Big.png" id="4_33tmu"]
+[ext_resource type="Texture2D" uid="uid://g64nqko737v3" path="res://testing/Icons/Arrows_Media_Controls_Pause.png" id="5_kcgbh"]
+[ext_resource type="Texture2D" uid="uid://bec0hr82nav6p" path="res://testing/Icons/RPG_Skill_Teeth_Fangs_Bite_Beast_Vampire_Blood_Leech_Damage.png" id="6_ihvjp"]
+[ext_resource type="Texture2D" uid="uid://dua030u8conv3" path="res://testing/Icons/Alchemy_Potion_Vial_Bottle_Small_Full.png" id="7_33ejm"]
+[ext_resource type="Texture2D" uid="uid://ckgosq8xdu6gn" path="res://testing/Icons/Tools_Crafting_Bone_Skeleton_Remains_Small.png" id="8_fjfvf"]
+[ext_resource type="Texture2D" uid="uid://bceguvw4pgawm" path="res://testing/Icons/Arrows_Recycle_Triangle_Trash_Garbage_Rubbish_Reuse.png" id="9_65vjf"]
+[ext_resource type="Texture2D" uid="uid://5acd5fwcbk7u" path="res://testing/Icons/RPG_Buff_Blink_Teleport_Invisibility.png" id="10_2gu3h"]
+[ext_resource type="Texture2D" uid="uid://bl3etqv2ndv7j" path="res://testing/Icons/RPG_Creature_Archetypes_Ghost_Specter_Poltergeist.png" id="11_iob2k"]
+[ext_resource type="Texture2D" uid="uid://ca6joxf3rroxt" path="res://testing/Icons/Software_Magnifier_Zoom_Looking_Magnifying_Glass_Plus_In.png" id="12_g452r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
+shader = ExtResource("2_7odlb")
+shader_parameter/limit = 0.0250000011875
+shader_parameter/blur = 2.6000001235
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gbfpv"]
+shader = ExtResource("3_huo54")
+shader_parameter/alpha = 0.26
+shader_parameter/inner_radius = 0.83
+shader_parameter/outer_radius = 1.305
+
+[node name="HUD" type="Control" unique_id=601484817]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7odlb")
+
+[node name="BlurFX" type="ColorRect" parent="." unique_id=2136408616]
+material = SubResource("ShaderMaterial_yf5fn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VignetteFX" type="ColorRect" parent="." unique_id=1533516578]
+material = SubResource("ShaderMaterial_gbfpv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=470392484]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="RightPanels" type="VBoxContainer" parent="MarginContainer" unique_id=1276251064]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/separation = 2
+
+[node name="TimeDisplay" type="PanelContainer" parent="MarginContainer/RightPanels" unique_id=1362238266]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/RightPanels/TimeDisplay" unique_id=1061267699]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer" unique_id=2143987681]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer" unique_id=633355109]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1860013594]
+layout_mode = 2
+texture = ExtResource("4_33tmu")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer/HBoxContainer" unique_id=2125913004]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=642755315]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=900094516]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "23:01"
+
+[node name="Label" type="Label" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1660966560]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "06/10/1934"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/RightPanels" unique_id=942316073]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Button3" type="Button" parent="MarginContainer/RightPanels/HBoxContainer" unique_id=763332599]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("5_kcgbh")
+icon_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=682880246]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2052489489]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1899023291]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_constants/separation = 0
+
+[node name="ResourcesPanel" type="PanelContainer" parent="HBoxContainer/VBoxContainer" unique_id=935101699]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/ResourcesPanel" unique_id=1938077160]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer" unique_id=1986215082]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1692426639]
+layout_mode = 2
+texture = ExtResource("6_ihvjp")
+stretch_mode = 3
+
+[node name="FleshLabel" type="Label" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=753378521]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "4692"
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1696970630]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=30097158]
+layout_mode = 2
+texture = ExtResource("7_33ejm")
+stretch_mode = 3
+
+[node name="BloodLabel" type="Label" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=140557730]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "53"
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1265027666]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1436151359]
+layout_mode = 2
+texture = ExtResource("8_fjfvf")
+stretch_mode = 3
+
+[node name="BonesLabel" type="Label" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1179927223]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1578"
+
+[node name="VSeparator4" type="VSeparator" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=83477678]
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=786070117]
+layout_mode = 2
+texture = ExtResource("9_65vjf")
+stretch_mode = 3
+
+[node name="SoulFragmentsLabel" type="Label" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1383464330]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "3"
+
+[node name="VSeparator5" type="VSeparator" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=270364220]
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1724214837]
+layout_mode = 2
+texture = ExtResource("10_2gu3h")
+stretch_mode = 3
+
+[node name="BodyPartsLabel" type="Label" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=18228849]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "3"
+
+[node name="VSeparator6" type="VSeparator" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1329296142]
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1593943624]
+layout_mode = 2
+texture = ExtResource("11_iob2k")
+stretch_mode = 3
+
+[node name="SoulsLabel" type="Label" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1774005567]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "3"
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1454015641]
+custom_maximum_size = Vector2(24, -1)
+layout_mode = 2
+icon = ExtResource("12_g452r")
+icon_alignment = 1

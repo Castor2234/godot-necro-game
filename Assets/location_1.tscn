@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bqyta5iliypd0"]
+
+[ext_resource type="Texture2D" uid="uid://5ilbeuglqucr" path="res://Assets/location_1.png" id="1_m0eg3"]
+
+[node name="Location1" type="Sprite2D" unique_id=285424999]
+z_index = -1
+texture = ExtResource("1_m0eg3")
+centered = false

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c2hyifwkuq0pe"]
+
+[ext_resource type="Script" uid="uid://fgl8b056kmno" path="res://ui/resource_row.gd" id="1_nagbn"]
+
+[node name="ResourceRow" type="HBoxContainer" unique_id=1831981610]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 6
+script = ExtResource("1_nagbn")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=337822310]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Amount" type="Label" parent="." unique_id=850617393]
+layout_mode = 2
