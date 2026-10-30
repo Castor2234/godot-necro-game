@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cb28jvtj1sa0v"]
 
-[ext_resource type="Script" uid="uid://bnuyle6n3vr5x" path="res://GlobalScripts/game.gd" id="1_km7p3"]
-[ext_resource type="PackedScene" uid="uid://bqyta5iliypd0" path="res://Assets/location_1.tscn" id="2_1utv4"]
+[ext_resource type="Script" uid="uid://d1nyvk5vpu6xu" path="res://scenes/location_1/location_1.gd" id="1_km7p3"]
+[ext_resource type="PackedScene" uid="uid://bqyta5iliypd0" path="res://scenes/background_scenes/location_1_bg.tscn" id="2_1utv4"]
 [ext_resource type="Script" uid="uid://dwi1twp3qnenh" path="res://GlobalScripts/camera_2d.gd" id="3_xilrr"]
 [ext_resource type="PackedScene" uid="uid://8k08f3brachc" path="res://Buildings/base/base.tscn" id="4_attwl"]
 [ext_resource type="PackedScene" uid="uid://dxab1xou3bq1c" path="res://Buildings/village/village.tscn" id="5_0am8d"]
@@ -10,13 +10,15 @@
 [ext_resource type="Resource" uid="uid://cl3h3taik6f5e" path="res://data/villages/village3.tres" id="8_kkei4"]
 [ext_resource type="PackedScene" uid="uid://cluatfgjljbua" path="res://ui/hud.tscn" id="9_30fw1"]
 
-[node name="MainScene" type="Node2D" unique_id=2038004140]
+[node name="Location_1" type="Node2D" unique_id=2038004140]
 script = ExtResource("1_km7p3")
 
 [node name="Location1BG" parent="." unique_id=285424999 instance=ExtResource("2_1utv4")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1431424767]
 script = ExtResource("3_xilrr")
+
+[node name="Groups" type="Node2D" parent="." unique_id=1749630703]
 
 [node name="Base" parent="." unique_id=1234339083 instance=ExtResource("4_attwl")]
 position = Vector2(19, 42)

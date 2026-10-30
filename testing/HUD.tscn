@@ -3,15 +3,13 @@
 [ext_resource type="Script" uid="uid://dojxae0bpj7w6" path="res://testing/hud.gd" id="1_7odlb"]
 [ext_resource type="Shader" uid="uid://chwm7psb4js3b" path="res://testing/shaders/LittleBlurShader.gdshader" id="2_7odlb"]
 [ext_resource type="Shader" uid="uid://462xqrwp2utu" path="res://testing/shaders/VignetteShader.gdshader" id="3_huo54"]
-[ext_resource type="Texture2D" uid="uid://c4uukksjnx05s" path="res://testing/Icons/Weather_Moon_Night_Crescent_Darkness_Mode_Twilight_Big.png" id="4_33tmu"]
-[ext_resource type="Texture2D" uid="uid://g64nqko737v3" path="res://testing/Icons/Arrows_Media_Controls_Pause.png" id="5_kcgbh"]
-[ext_resource type="Texture2D" uid="uid://bec0hr82nav6p" path="res://testing/Icons/RPG_Skill_Teeth_Fangs_Bite_Beast_Vampire_Blood_Leech_Damage.png" id="6_ihvjp"]
-[ext_resource type="Texture2D" uid="uid://dua030u8conv3" path="res://testing/Icons/Alchemy_Potion_Vial_Bottle_Small_Full.png" id="7_33ejm"]
-[ext_resource type="Texture2D" uid="uid://ckgosq8xdu6gn" path="res://testing/Icons/Tools_Crafting_Bone_Skeleton_Remains_Small.png" id="8_fjfvf"]
-[ext_resource type="Texture2D" uid="uid://bceguvw4pgawm" path="res://testing/Icons/Arrows_Recycle_Triangle_Trash_Garbage_Rubbish_Reuse.png" id="9_65vjf"]
-[ext_resource type="Texture2D" uid="uid://5acd5fwcbk7u" path="res://testing/Icons/RPG_Buff_Blink_Teleport_Invisibility.png" id="10_2gu3h"]
-[ext_resource type="Texture2D" uid="uid://bl3etqv2ndv7j" path="res://testing/Icons/RPG_Creature_Archetypes_Ghost_Specter_Poltergeist.png" id="11_iob2k"]
-[ext_resource type="Texture2D" uid="uid://ca6joxf3rroxt" path="res://testing/Icons/Software_Magnifier_Zoom_Looking_Magnifying_Glass_Plus_In.png" id="12_g452r"]
+[ext_resource type="Texture2D" uid="uid://bwey1566rxgt0" path="res://icon.svg" id="4_mie2m"]
+[ext_resource type="Texture2D" uid="uid://dfe6nydari2o3" path="res://testing/Icons/RPG_Skill_Teeth_Fangs_Bite_Beast_Vampire_Blood_Leech_Damage.png" id="6_ihvjp"]
+[ext_resource type="Texture2D" uid="uid://cayk6bpgdh8f4" path="res://testing/Icons/Alchemy_Potion_Vial_Bottle_Small_Full.png" id="7_33ejm"]
+[ext_resource type="Texture2D" uid="uid://d2djpe7uv3ev2" path="res://testing/Icons/Tools_Crafting_Bone_Skeleton_Remains_Small.png" id="8_fjfvf"]
+[ext_resource type="Texture2D" uid="uid://b18ulsoxfphmx" path="res://testing/Icons/Arrows_Recycle_Triangle_Trash_Garbage_Rubbish_Reuse.png" id="9_65vjf"]
+[ext_resource type="Texture2D" uid="uid://d4ao0sp1kdold" path="res://testing/Icons/RPG_Buff_Blink_Teleport_Invisibility.png" id="10_2gu3h"]
+[ext_resource type="Texture2D" uid="uid://b8kfy61m36f68" path="res://testing/Icons/RPG_Creature_Archetypes_Ghost_Specter_Poltergeist.png" id="11_iob2k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
 shader = ExtResource("2_7odlb")
@@ -89,7 +87,6 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1860013594]
 layout_mode = 2
-texture = ExtResource("4_33tmu")
 stretch_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/RightPanels/TimeDisplay/VBoxContainer/MarginContainer/HBoxContainer" unique_id=2125913004]
@@ -116,7 +113,7 @@ theme_override_constants/separation = 0
 [node name="Button3" type="Button" parent="MarginContainer/RightPanels/HBoxContainer" unique_id=763332599]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = ExtResource("5_kcgbh")
+icon = ExtResource("4_mie2m")
 icon_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=682880246]
@@ -235,5 +232,4 @@ text = "3"
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/ResourcesPanel/MarginContainer/HBoxContainer" unique_id=1454015641]
 custom_maximum_size = Vector2(24, -1)
 layout_mode = 2
-icon = ExtResource("12_g452r")
 icon_alignment = 1

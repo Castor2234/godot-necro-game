@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5g2rsvm48i1p"]
 
-[ext_resource type="Script" uid="uid://bnx1rnd4uaiew" path="res://Units/unit_group.gd" id="1_wbbrm"]
+[ext_resource type="Script" uid="uid://bom3d8irw8cbm" path="res://scenes/unit_group/unit_group.gd" id="1_m40w5"]
 
 [sub_resource type="Gradient" id="Gradient_euuhj"]
 
@@ -8,11 +8,12 @@
 gradient = SubResource("Gradient_euuhj")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8hk2"]
+size = Vector2(24, 22)
 
-[node name="Units" type="CharacterBody2D" unique_id=1211235079]
+[node name="Unit_group" type="Area2D" unique_id=783968343]
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("1_wbbrm")
+script = ExtResource("1_m40w5")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=865623573]
 scale = Vector2(0.3125, 0.29947913)
@@ -20,5 +21,3 @@ texture = SubResource("GradientTexture2D_t23tc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1982816825]
 shape = SubResource("RectangleShape2D_g8hk2")
-
-[node name="WaitTimer" type="Timer" parent="." unique_id=1296353358]

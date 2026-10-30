@@ -11,7 +11,7 @@ size = Vector2(54, 52)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8hk2"]
 bg_color = Color(3.657937e-06, 0.7258584, 0.174196, 1)
 
-[node name="Village" type="Area2D" unique_id=1308202906 groups=["Villages"]]
+[node name="Village" type="Area2D" unique_id=1308202906 groups=["villages"]]
 collision_mask = 3
 script = ExtResource("1_2wk00")
 

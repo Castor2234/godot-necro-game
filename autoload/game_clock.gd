@@ -70,8 +70,6 @@ func _do_tick() -> void:
 	tick_count += 1
 	total_minutes += MINUTES_PER_TICK
 	
-	Debug.log("Elapsed time: %d" %tick_count, "time")
-	
 	tick.emit(tick_count)
 	time_changed.emit(total_minutes)
 
